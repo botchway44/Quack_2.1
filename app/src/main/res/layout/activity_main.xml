@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="macrodes.lab.com.quack.old_group_chat.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- titile/ action bar-->
+        <LinearLayout
+            android:layout_height="55sp"
+            android:layout_width="match_parent"
+            android:background="@color/colorAccent"
+            >
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:padding="10sp"
+                android:textColor="#ffffff"
+                android:text="Quack"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:onClick="logOutClicked"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="#ffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Sign Out"/>
+                <ImageButton
+                    android:layout_width="42sp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_close_black_24dp"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_gravity="right"
+                    android:tooltipText="Sign Out"
+                    android:onClick="logOutClicked"
+
+                    />
+            </LinearLayout>
+
+
+            <ImageButton
+                android:layout_width="42sp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_more_vert_black_24dp"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_gravity="right"
+                android:onClick="settingsClicked"
+
+                />
+        </LinearLayout>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#999798"
+            android:id="@+id/list"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:background="#D3D3D3 "
+            android:padding="10sp">
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="enter message"
+                android:maxLines="10"
+                android:id="@+id/message"
+                android:layout_weight="1">
+
+            </EditText>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/addimg"
+                android:onClick="loadImage"
+                android:src="@drawable/ic_file_upload_black_24dp"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+                android:id="@+id/send"
+                android:onClick="sendMessage"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="macrodes.lab.com.quack.ViewContactProfileActivity">
+        <LinearLayout
+            android:background="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="55sp">
+
+            <ImageButton
+                android:layout_width="55sp"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:onClick="backButtonClicked"
+                android:src="@drawable/ic_arrow_back_black_24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                android:text="Profile"/>
+        </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_height="250sp"
+                    android:layout_width="match_parent"
+                    >
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:background="#d5dcdc"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:onClick="viewProfile"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:id="@+id/userImage"/>
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:background="#fdfdfd"
+                        android:padding="8sp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@+id/username"
+                            android:text="Username"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:padding="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:background="#ddd1d9d9"
+                        android:padding="10sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about"/>
+
+
+                    <LinearLayout
+                        android:background="#fbfbfc"
+                        android:padding="4sp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5sp"
+                            android:padding="10sp"
+                            android:id="@+id/aboutmeBtn"
+                            android:clickable="true"
+                            android:text="about"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1sp"
+                            android:background="#7e7e80"
+                            />
+
+                        <TextView
+                            android:padding="10sp"
+                            android:layout_margin="5sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:id="@+id/phoneNumberBtn"
+                            android:text="Phone Number"/>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1sp"
+                            android:background="#7e7e80"
+                            />
+
+                        <TextView
+                            android:padding="10sp"
+                            android:layout_margin="5sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:id="@+id/userEmail"
+                            android:text="Email"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/followUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="150dp"
+            android:layout_marginRight="50dp"
+            android:clickable="true"
+            android:visibility="visible"
+            android:onClick="FollowUserClicked"
+            android:padding="10sp"
+            android:src="@drawable/ic_favorite_black_24dp" />
+
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="100dp"
+            android:layout_marginBottom="94dp"
+            android:clickable="true"
+            android:visibility="visible"
+            android:onClick="Add_Friend_Btn"
+            android:id="@+id/AddFriendBtn"
+            android:src="@drawable/ic_person_add_black_24dp"
+            android:layout_gravity="bottom|right"/>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="35dp"
+            android:clickable="true"
+            android:visibility="visible"
+            android:id="@+id/acceptFriendRequest"
+            android:onClick="AcceptButtonClicked"
+            android:src="@drawable/ic_plus_one_black_24dp"
+            android:layout_gravity="bottom|right"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="95dp"
+            android:clickable="true"
+            android:id="@+id/showActionBtns"
+            android:src="@drawable/ic_add_black_24dp"
+            android:layout_gravity="bottom|right"/>
+
+
+    </FrameLayout>
+    <!--
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_margin="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/AcceptButton"
+            android:onClick="AcceptButtonClicked"
+            android:text="Accept"/>
+
+        <ImageButton
+            android:layout_margin="7dp"
+            android:layout_gravity="bottom|center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Add_Friend_Btn"
+            android:id="@+id/sendRequestButton"
+            android:src="@drawable/ic_person_add_black_24dp"
+            />
+
+        <Button
+            android:layout_margin="7dp"
+            android:id="@+id/FollowButtonClicked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Follow"/>
+
+    </LinearLayout>
+
+    -->
+    </LinearLayout>
+

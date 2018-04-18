@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "943456927620",
+    "firebase_url": "https://quack-42785.firebaseio.com",
+    "project_id": "quack-42785",
+    "storage_bucket": "quack-42785.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943456927620:android:68fcb80ea5b1c14c",
+        "android_client_info": {
+          "package_name": "macrodes.lab.com.quack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "943456927620-r7uttr9n9lco5r0fqeuprma54hqd5p6h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC41C6cHCvgz6lkoOmzkUHc2jOFS-dfdFg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

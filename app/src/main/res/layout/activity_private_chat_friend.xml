@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="macrodes.lab.com.quack.PrivateChatFriend">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="macrodes.lab.com.quack.public_profile.ChangeAboutMe">
+
+        <LinearLayout
+            android:padding="5dp"
+            android:background="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:onClick="backButtonClicked"
+                android:src="@drawable/ic_arrow_back_black_24dp"/>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_marginLeft="10sp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/profileImg"
+                    android:src="@raw/quack_user"/>
+
+                <LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:onClick="ShowProfile"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:id="@+id/personName"
+                        android:text="username"/>
+
+                    <TextView
+                        android:textSize="12dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:id="@+id/description"
+                        android:text="username"/>
+
+
+                </LinearLayout>
+
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="33dp"
+                android:layout_height="match_parent">
+                <ImageButton
+                    android:onClick="showOptionsMenu"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_more_vert_black_24dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ProgressBar
+            android:layout_gravity="center"
+            android:id="@+id/privateChatFriendProgressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="30sp" />
+<ListView
+    android:background="#abbebdbc"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/messagesList"
+    android:layout_weight="1">
+
+</ListView>
+
+    <LinearLayout
+        android:background="@drawable/btnrounded"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="0.1dp"
+        android:layout_marginBottom="2dp"
+        android:padding="4sp">
+
+<LinearLayout
+
+    android:layout_weight="1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:background="@drawable/btnrounded"
+        android:layout_gravity="center"
+        android:layout_weight="0.05"
+        android:layout_marginLeft="1.5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="55sp"
+        android:src="@drawable/ic_attach_file_black_24dp"
+        android:onClick="attachMentSelection"/>
+
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_margin="6dp"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="enter message"
+            android:maxLines="6"
+            android:id="@+id/message"
+            android:layout_weight="1">
+
+        </EditText>
+
+        <ImageButton
+            android:background="@drawable/btnrounded"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recordAudio"
+            android:src="@drawable/ic_keyboard_voice_black_24dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+        <ImageButton
+            android:layout_gravity="center"
+            android:layout_weight="0.05"
+            android:layout_marginLeft="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="55sp"
+            android:src="@drawable/ic_send_black_24dp"
+            android:id="@+id/send"
+            android:background="@drawable/btnrounded"
+            android:onClick="sendMessage"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/selectionAction"
+        android:background="#c51a1919"
+        android:visibility="gone"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+
+        <ImageButton
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_gravity="right"
+            android:layout_width="30dp"
+            android:onClick="closeAttachmentLayout"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_close_black_24dp"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gallery"/>
+
+                <ImageButton
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:onClick="loadImage"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_image_black_24dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+            </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Camera"/>
+
+            <ImageButton
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:src="@drawable/ic_photo_camera_black_24dp"
+                android:layout_margin="5dp"
+                android:layout_width="100dp"
+                android:onClick="CameraClicked"
+                android:layout_height="100dp" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Audio"/>
+        <ImageButton
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:src="@drawable/ic_music_video_black_24dp"
+            android:layout_margin="5dp"
+            android:onClick="SelectAudioClick"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+    </LinearLayout>
+              </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/inChatsMenuLayout"
+        android:orientation="vertical"
+        android:layout_marginTop="50sp"
+        android:layout_marginRight="20sp"
+        android:background="#faf9f9"
+        android:layout_gravity="right"
+        android:layout_width="250dp"
+        android:layout_height="170dp">
+
+        <ImageButton
+            android:paddingTop="0dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:onClick="HideLayoutInChats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close_in_chats_24dp"
+            android:layout_gravity="right"
+            tools:ignore="OnClick" />
+        <View
+            android:layout_marginRight="20sp"
+            android:layout_marginLeft="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="#454444"/>
+        <Button
+            android:onClick="ClearAllChats"
+            android:layout_gravity="center"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear all chats"/>
+        <View
+           android:layout_marginRight="20sp"
+            android:layout_marginLeft="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="#454444"/>
+        <Button
+            android:layout_gravity="center"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="UnfriendUser"
+            android:text="Unfriend"/>
+
+    </LinearLayout>
+</FrameLayout>
