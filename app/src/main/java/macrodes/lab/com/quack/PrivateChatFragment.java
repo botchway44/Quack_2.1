@@ -164,6 +164,13 @@ private MyChatListAdapter myChatListAdapter;
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 Contacts contact = dataSnapshot.getValue(Contacts.class);
                 //toast(userId+" is tostring "+contact.toString());
+
+                TextView show_error = view.findViewById(R.id.no_message_in_list);
+                if(dataSnapshot.getChildrenCount() > 0){
+                    show_error.setVisibility(View.GONE);
+                }else {
+                    show_error.setVisibility(View.VISIBLE);
+                }
                 contacts.add(contact);
                 myChatListAdapter.notifyDataSetChanged();
                 if(contacts.size() > 0){

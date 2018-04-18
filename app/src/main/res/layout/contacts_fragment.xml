@@ -2,13 +2,16 @@
 <LinearLayout
     android:orientation="vertical"
     android:gravity="center"
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
 
         <ProgressBar
             android:layout_gravity="center"
@@ -22,6 +25,8 @@
             android:layout_height="match_parent"
             android:id="@+id/friendsList">
         </ListView>
+
+
     </FrameLayout>
 
 </LinearLayout>

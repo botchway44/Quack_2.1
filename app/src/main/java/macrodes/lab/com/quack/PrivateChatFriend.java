@@ -406,8 +406,8 @@ public class PrivateChatFriend extends SimpleActivity {
                     Bitmap bm = (Bitmap) extras.get("data");
                     int width = bm.getWidth();
                     int height = bm.getHeight();
-                    float scaleWidth = ((float) 4000) / width;
-                    float scaleHeight = ((float) 4000) / height;
+                    float scaleWidth = ((float) 6000) / width;
+                    float scaleHeight = ((float) 6000) / height;
                     // CREATE A MATRIX FOR THE MANIPULATION
                     Matrix matrix = new Matrix();
                     // RESIZE THE BIT MAP
