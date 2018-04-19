@@ -180,6 +180,13 @@ public class PrivateChatFriend extends SimpleActivity {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 ChatMessages currentChat = dataSnapshot.getValue(ChatMessages.class);
+
+                if (dataSnapshot.getChildrenCount() < 0){
+                    findTextView(R.id.no_message_).setVisibility(View.VISIBLE);
+                }else {
+
+                    findTextView(R.id.no_message_).setVisibility(View.GONE);
+                }
                 chats.add(currentChat);
                 //toast("new messages detcted");
                 //show notification for new message received
